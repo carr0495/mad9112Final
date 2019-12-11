@@ -68,7 +68,7 @@ EXPOSE 80" >> Dockerfile
 # git commit -am "finished step k and l"
 docker build . -t myserver:v1
 docker images
-docker run -p 1234:80 myserver:v1
+docker run -p 1234:80 myserver:v1 &
 
 # git commit -am "finished step m"
 
@@ -110,4 +110,4 @@ git checkout master
 git merge FinalComments
 cd ~
 cp final.sh FinalProjectRepository
-tar –cfj FinalProject_AidenCarrie.tar FinalProjectRepository
+sudo tar -cvjSf FinalProject_AidenCarrie.tar.bz2 FinalProjectRepository
